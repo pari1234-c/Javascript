@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Directory</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+                <h1>Employee Directory</h1>
+
+                <p>
+                    JSON Data Management Dashboard
+                </p>
+            </div>
+
+            <div class="loader"
+                id="loader">
+                Loading...
+            </div>
+
+        </header>
+
+
+        <!-- Controls -->
+
+        <div class="controls">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search employee..."
+                >
+
+            </div>
+
+
+            <select id="departmentFilter">
+
+                <option value="All">
+                    All Departments
+                </option>
+
+                <option value="Development">
+                    Development
+                </option>
+
+                <option value="Design">
+                    Design
+                </option>
+
+                <option value="Testing">
+                    Testing
+                </option>
+
+                <option value="HR">
+                    HR
+                </option>
+
+                <option value="Marketing">
+                    Marketing
+                </option>
+
+            </select>
+
+
+            <select id="sortSalary">
+
+                <option value="none">
+                    Sort by Salary
+                </option>
+
+                <option value="low">
+                    Salary: Low → High
+                </option>
+
+                <option value="high">
+                    Salary: High → Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Loading Methods -->
+
+        <div class="method-buttons">
+
+            <button id="fetchBtn">
+                Load using Fetch()
+            </button>
+
+            <button id="jqueryBtn">
+                Load using $.getJSON()
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <span>Total Employees</span>
+
+                <strong id="totalEmployees">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Average Salary</span>
+
+                <strong id="averageSalary">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Highest Salary</span>
+
+                <strong id="highestSalary">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- Employee Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Department</th>
+
+                        <th>Experience</th>
+
+                        <th>Salary</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="employeeTable">
+
+                </tbody>
+
+            </table>
+
+            <p
+                id="noData"
+                class="no-data">
+                No employee data available.
+            </p>
+
+        </div>
+
+
+        <div class="footer">
+
+            Data loaded dynamically from
+            <strong>employees.json</strong>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

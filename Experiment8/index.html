@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="heading">
+            <h1>Gym Admission Form</h1>
+            <p>Complete the form to register for your membership</p>
+        </div>
+
+        <form id="gymForm">
+
+            <!-- Personal Details -->
+            <section>
+                <h2>Personal Details</h2>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                        <small id="nameError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label>Age</label>
+                        <input type="number" id="age" placeholder="Enter age">
+                        <small id="ageError"></small>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com">
+                        <small id="emailError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label>Phone Number</label>
+                        <input type="text" id="phone" placeholder="10-digit number">
+                        <small id="phoneError"></small>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Physical Details -->
+            <section>
+                <h2>Physical Details</h2>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>Height (cm)</label>
+                        <input type="number" id="height" placeholder="Height">
+                    </div>
+
+                    <div class="field">
+                        <label>Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Weight">
+                    </div>
+
+                </div>
+
+                <div class="bmi-box">
+                    <span>BMI</span>
+                    <strong id="bmiValue">--</strong>
+                    <p id="bmiStatus">Enter height and weight</p>
+                </div>
+
+            </section>
+
+
+            <!-- Membership -->
+            <section>
+                <h2>Membership Details</h2>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>Membership Plan</label>
+
+                        <select id="plan">
+                            <option value="">Select Plan</option>
+                            <option value="Basic">Basic - ₹1000/month</option>
+                            <option value="Premium">Premium - ₹1800/month</option>
+                            <option value="Elite">Elite - ₹2500/month</option>
+                        </select>
+
+                        <small id="planError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label>Duration</label>
+
+                        <select id="duration">
+                            <option value="">Select Duration</option>
+                            <option value="1">1 Month</option>
+                            <option value="3">3 Months</option>
+                            <option value="6">6 Months</option>
+                            <option value="12">12 Months</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Personal Trainer</label>
+
+                    <div class="radio-group">
+
+                        <label>
+                            <input type="radio" name="trainer" value="Yes">
+                            Yes (+₹500/month)
+                        </label>
+
+                        <label>
+                            <input type="radio" name="trainer" value="No" checked>
+                            No
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Account Details -->
+            <section>
+                <h2>Account Details</h2>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" id="password">
+                        <small id="passwordError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirmPassword">
+                        <small id="confirmError"></small>
+                    </div>
+
+                </div>
+
+                <label class="terms">
+                    <input type="checkbox" id="terms">
+                    I agree to the gym terms and conditions.
+                </label>
+
+                <small id="termsError"></small>
+
+            </section>
+
+
+            <!-- Fee -->
+            <div class="fee-box">
+
+                <div>
+                    <span>Membership Fee</span>
+                    <strong id="membershipFee">₹0</strong>
+                </div>
+
+                <div>
+                    <span>Trainer Fee</span>
+                    <strong id="trainerFee">₹0</strong>
+                </div>
+
+                <div class="total">
+                    <span>Total Amount</span>
+                    <strong id="totalFee">₹0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button type="submit" class="submit-btn">
+                    Register Member
+                </button>
+
+                <button type="reset" class="reset-btn" id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <!-- Admission Summary -->
+        <div id="summary" class="summary hidden">
+
+            <h2>Admission Successful</h2>
+
+            <div id="summaryContent"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

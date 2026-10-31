@@ -1,0 +1,82 @@
+[
+    {
+        "id": 101,
+        "name": "Aarav Sharma",
+        "email": "aarav@gmail.com",
+        "department": "Development",
+        "experience": 3,
+        "salary": 55000
+    },
+    {
+        "id": 102,
+        "name": "Ananya Patel",
+        "email": "ananya@gmail.com",
+        "department": "Design",
+        "experience": 2,
+        "salary": 48000
+    },
+    {
+        "id": 103,
+        "name": "Rohan Mehta",
+        "email": "rohan@gmail.com",
+        "department": "Development",
+        "experience": 5,
+        "salary": 72000
+    },
+    {
+        "id": 104,
+        "name": "Ishita Verma",
+        "email": "ishita@gmail.com",
+        "department": "HR",
+        "experience": 4,
+        "salary": 60000
+    },
+    {
+        "id": 105,
+        "name": "Kabir Singh",
+        "email": "kabir@gmail.com",
+        "department": "Testing",
+        "experience": 2,
+        "salary": 45000
+    },
+    {
+        "id": 106,
+        "name": "Meera Joshi",
+        "email": "meera@gmail.com",
+        "department": "Development",
+        "experience": 6,
+        "salary": 85000
+    },
+    {
+        "id": 107,
+        "name": "Aditya Kulkarni",
+        "email": "aditya@gmail.com",
+        "department": "Marketing",
+        "experience": 3,
+        "salary": 52000
+    },
+    {
+        "id": 108,
+        "name": "Sneha Deshmukh",
+        "email": "sneha@gmail.com",
+        "department": "Design",
+        "experience": 5,
+        "salary": 68000
+    },
+    {
+        "id": 109,
+        "name": "Yash Gupta",
+        "email": "yash@gmail.com",
+        "department": "Testing",
+        "experience": 4,
+        "salary": 58000
+    },
+    {
+        "id": 110,
+        "name": "Diya Nair",
+        "email": "diya@gmail.com",
+        "department": "HR",
+        "experience": 7,
+        "salary": 78000
+    }
+]

@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #eef1f5;
+    --card: #ffffff;
+    --text: #222;
+    --secondary: #666;
+    --border: #ddd;
+    --primary: #222;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 7px;
+}
+
+header p {
+    color: var(--secondary);
+}
+
+.session-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--card);
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+
+    background: green;
+    border-radius: 50%;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.settings-panel,
+.preview-panel {
+    background: var(--card);
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    transition: 0.3s;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Settings */
+
+.setting {
+    margin-bottom: 23px;
+}
+
+.setting > label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 9px;
+}
+
+.setting p {
+    color: var(--secondary);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 6px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+
+/* Theme buttons */
+
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn {
+    flex: 1;
+
+    padding: 11px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: var(--card);
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+.theme-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+
+/* Layout */
+
+.layout-options {
+    display: flex;
+    gap: 25px;
+}
+
+.layout-options label {
+    cursor: pointer;
+}
+
+.layout-options input {
+    margin-right: 5px;
+}
+
+
+/* Toggle */
+
+.toggle-setting {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Toggle switch */
+
+.switch {
+    position: relative;
+
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background: #ccc;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #222;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+
+/* Buttons */
+
+.actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.actions button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.save-btn {
+    flex: 1;
+
+    background: var(--primary);
+    color: white;
+}
+
+.reset-btn {
+    background: #ddd;
+    color: #222;
+}
+
+
+/* Preview */
+
+.preview-card {
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.preview-card h3 {
+    margin-bottom: 10px;
+}
+
+.preview-card > p {
+    color: var(--secondary);
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+.preview-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.preview-info div {
+    padding: 12px;
+
+    background: var(--bg);
+
+    border-radius: 7px;
+}
+
+.preview-info span,
+.preview-info strong {
+    display: block;
+}
+
+.preview-info span {
+    font-size: 12px;
+
+    color: var(--secondary);
+
+    margin-bottom: 5px;
+}
+
+
+/* Storage */
+
+.storage-box {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: var(--bg);
+
+    border-radius: 8px;
+}
+
+.storage-box h3 {
+    margin-bottom: 12px;
+}
+
+.storage-box p {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    color: var(--secondary);
+}
+
+
+/* Dark mode */
+
+body.dark {
+    --bg: #181818;
+    --card: #242424;
+    --text: #f2f2f2;
+    --secondary: #aaa;
+    --border: #3b3b3b;
+    --primary: #f2f2f2;
+}
+
+body.dark .save-btn {
+    color: #222;
+}
+
+body.dark .reset-btn {
+    background: #444;
+    color: white;
+}
+
+body.dark .switch input:checked + .slider {
+    background: #eee;
+}
+
+body.dark .slider::before {
+    background: #222;
+}
+
+
+/* Compact layout */
+
+body.compact .setting {
+    margin-bottom: 14px;
+}
+
+body.compact .settings-panel,
+body.compact .preview-panel {
+    padding: 20px;
+}
+
+
+/* Large font */
+
+body.large {
+    font-size: 18px;
+}
+
+
+/* Small font */
+
+body.small {
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .preview-info {
+        grid-template-columns: 1fr;
+    }
+}

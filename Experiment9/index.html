@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Preference Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Preference Manager</h1>
+                <p>Customize and save your application preferences</p>
+            </div>
+
+            <div class="session-status">
+                <span class="status-dot"></span>
+                <span id="sessionStatus">Session Active</span>
+            </div>
+        </header>
+
+
+        <!-- Main Layout -->
+        <div class="dashboard">
+
+            <!-- Settings Panel -->
+            <div class="settings-panel">
+
+                <h2>User Preferences</h2>
+
+                <!-- Username -->
+                <div class="setting">
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+
+                <!-- Theme -->
+                <div class="setting">
+
+                    <label>
+                        Theme
+                    </label>
+
+                    <div class="theme-buttons">
+
+                        <button
+                            class="theme-btn active"
+                            data-theme="light"
+                        >
+                            ☀ Light
+                        </button>
+
+                        <button
+                            class="theme-btn"
+                            data-theme="dark"
+                        >
+                            ☾ Dark
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Font Size -->
+                <div class="setting">
+
+                    <label for="fontSize">
+                        Font Size
+                    </label>
+
+                    <select id="fontSize">
+
+                        <option value="small">
+                            Small
+                        </option>
+
+                        <option value="medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="large">
+                            Large
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Layout -->
+                <div class="setting">
+
+                    <label>
+                        Layout
+                    </label>
+
+                    <div class="layout-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="layout"
+                                value="compact"
+                            >
+                            Compact
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="layout"
+                                value="comfortable"
+                                checked
+                            >
+                            Comfortable
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Notifications -->
+                <div class="setting toggle-setting">
+
+                    <div>
+                        <label>
+                            Notifications
+                        </label>
+
+                        <p>
+                            Receive application notifications
+                        </p>
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notifications"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="actions">
+
+                    <button
+                        id="saveBtn"
+                        class="save-btn"
+                    >
+                        Save Preferences
+                    </button>
+
+                    <button
+                        id="resetBtn"
+                        class="reset-btn"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Preview Panel -->
+            <div class="preview-panel">
+
+                <h2>Live Preview</h2>
+
+                <div
+                    id="previewCard"
+                    class="preview-card"
+                >
+
+                    <div class="avatar">
+                        <span id="avatarLetter">U</span>
+                    </div>
+
+                    <h3>
+                        Welcome,
+                        <span id="previewName">
+                            User
+                        </span>
+                    </h3>
+
+                    <p>
+                        This preview changes according to
+                        your saved preferences.
+                    </p>
+
+                    <div class="preview-info">
+
+                        <div>
+                            <span>Theme</span>
+                            <strong id="previewTheme">
+                                Light
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Font</span>
+                            <strong id="previewFont">
+                                Medium
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Notifications</span>
+                            <strong id="previewNotification">
+                                Enabled
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Storage Information -->
+                <div class="storage-box">
+
+                    <h3>Storage Information</h3>
+
+                    <p>
+                        <strong>localStorage:</strong>
+                        <span id="localStorageStatus">
+                            No preferences saved
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>sessionStorage:</strong>
+                        <span id="sessionStorageStatus">
+                            Session data active
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

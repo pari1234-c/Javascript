@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions & Regex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>String Functions & Regular Expressions</h1>
+
+        <!-- Email Validation -->
+        <div class="box">
+            <h2>Email Validation</h2>
+
+            <input type="text" id="email" placeholder="Enter your email">
+            <button onclick="validateEmail()">Validate Email</button>
+
+            <p id="emailResult"></p>
+        </div>
+
+        <!-- Data Extraction -->
+        <div class="box">
+            <h2>Data Extraction</h2>
+
+            <textarea id="textInput" placeholder="Enter text containing emails and phone numbers"></textarea>
+
+            <button onclick="extractData()">Extract Data</button>
+
+            <p><b>Emails:</b></p>
+            <p id="emails"></p>
+
+            <p><b>Phone Numbers:</b></p>
+            <p id="phones"></p>
+        </div>
+
+        <!-- Text Analysis -->
+        <div class="box">
+            <h2>Text Analysis</h2>
+
+            <textarea id="analysisText" placeholder="Enter text for analysis"></textarea>
+
+            <button onclick="analyzeText()">Analyze Text</button>
+
+            <div id="analysisResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

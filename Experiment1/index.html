@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Experiment 1</title>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function internalJS() {
+            console.log("This is Internal JavaScript");
+        }
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+    <h1>JavaScript Experiment 1</h1>
+
+    <!-- Inline JavaScript -->
+    <button onclick="alert('Welcome to JavaScript Lab!')">
+        Inline JavaScript
+    </button>
+
+    <br><br>
+
+    <button onclick="internalJS()">
+        Internal JavaScript
+    </button>
+
+    <br><br>
+
+    <button onclick="externalJS()">
+        External JavaScript
+    </button>
+
+    <script>
+        document.write("<h2>Welcome to JavaScript!</h2>");
+
+        console.log("Browser Name: " + navigator.appName);
+        console.log("Browser Version: " + navigator.appVersion);
+        console.log("Platform: " + navigator.platform);
+        console.log("Language: " + navigator.language);
+
+        console.error("This is a sample error message.");
+
+        console.table([
+            { Name: "Parinita", Course: "CSE AIML", Year: "Second" },
+            { Name: "Student", Course: "JavaScript Lab", Year: "Second" }
+        ]);
+
+        function first() {
+            second();
+        }
+
+        function second() {
+            console.trace("Function Call Trace");
+        }
+
+        first();
+    </script>
+
+</body>
+</html>
